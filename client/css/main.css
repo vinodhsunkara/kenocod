@@ -1,0 +1,54 @@
+.kenocod-logo {
+	height:55%;
+	width:55%;
+}
+#qcontainer {
+	overflow-y: scroll;
+	height:400px;
+	margin-left: 30px;
+}
+#anschoiceslabel {
+	margin-top: 15px;
+}
+#quizButtons {
+	margin-bottom: 15px;
+	margin-top: 15px;
+	margin-left:15px;
+}
+.beginQuizHeader {
+	margin-left: 15px;
+}
+#mmapsQImg {
+	width: 50%;
+	height: 50%;
+}
+#mmapsAnsImg {
+	width: 50%;
+	height: 50%;
+}
+#mmapsBack {
+	margin-left: 15px;
+}
+.homeContent {
+	margin-left: 15px;
+}
+.home-btns {
+	border: 1px solid #324fe1;
+	background-color: #5771ff;
+	color: #fff;
+	width: 100px;
+    text-align: center;
+	display: inline-block;
+}
+.home-btns: hover {
+	background-color: #324fe1;
+}
+.home-btns a {
+	color: #fff;
+}
+.home-btns a:hover {
+	text-decoration: none;
+}
+#menu {
+	margin-top: 15px;
+}

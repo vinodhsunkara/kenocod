@@ -1,0 +1,46 @@
+<div class="beginQuizHeader">
+	<a ui-sref="home">Back to home</a>
+	<h1 id="titleQuiz">Kenocod Quiz</h1>
+	<p>Answer the questions with appropriate choices to complete the solution for a coding problem.</p>
+<div>
+<div id="qcontainer">
+	<h1 ng-hide="{{qTextNoExists}}">{{qText}}</h1>
+	<img src="{{qImg}}" ng-hide="{{qImgNoExists}}"/>
+	<label>Partial Solution:</label>
+		<p ng-hide="{{qSolTextNoExists}}">{{qSolText}}</p>
+		<img src="{{qSolImg}}" ng-hide="{{qSolImgNoExists}}"/>
+	<p id="anschoiceslabel"><label>Answer Choices:</label></p>
+	<ul>
+		<li>
+			<label><input type="checkbox" id="anscboxa" name="anscheckbox" ng-checked = "isChecked('1')" ng-click="selectOnlyThis('1')"> a:</label>
+			<span ng-hide="{{ansATextNoExists}}">{{ansAText}}</span>
+			<img src="{{ansAImg}}" ng-hide="{{ansAImgNoExists}}"/>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<label><input type="checkbox" id="anscboxb" name="anscheckbox" ng-checked = "isChecked('2')" ng-click="selectOnlyThis('2')"> b:</label>
+			<span ng-hide="{{ansATextNoExists}}">{{ansBText}}</span>
+			<img src="{{ansBImg}}" ng-hide="{{ansBImgNoExists}}"/>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<label><input type="checkbox" id="anscboxc" name="anscheckbox" ng-checked = "isChecked('3')" ng-click="selectOnlyThis('3')"> c:</label>
+			<span ng-hide="{{ansATextNoExists}}">{{ansCText}}</span>
+			<img src="{{ansCImg}}" ng-hide="{{ansCImgNoExists}}"/>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<label><input type="checkbox" id="anscboxd" name="anscheckbox" ng-checked = "isChecked('4')" ng-click="selectOnlyThis('4')"> d:</label>
+			<span ng-hide="{{ansATextNoExists}}">{{ansDText}}</span>
+			<img src="{{ansDImg}}" ng-hide="{{ansDImgNoExists}}"/>
+		</li>
+	</ul>
+</div>
+<div id="quizButtons">
+<input type="button" ng-hide="previousNoExists()" ng-click="getPrevious()" value="Previous" />
+<input type="button" ng-click="submitQuiz()" value="Submit" />
+<input type="button" ng-hide="nextNoExists()" ng-click="getNext()" value="Next" />
+</div>

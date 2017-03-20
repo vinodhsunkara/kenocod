@@ -1,0 +1,9 @@
+<a id="mmapsBack" ui-sref="home">Back to home</a>
+<ul ng-repeat="x in answeredQuestions">
+	<li>
+		<h1 ng-show="{{x['qText'] != undefined}}">{{x['qText']}}</h1>
+		<img id="mmapsQImg" src="{{x['qImg']}}" ng-show="{{x['qImg'] != undefined}}" />
+		<p ng-show="{{x['qSolFullText'] != undefined}}">{{x['qSolFullText']}}</p>
+		<img id="mmapsAnsImg" src="{{x['qSolFullImg']}}" ng-show="{{x['qSolFullImg'] != undefined}}" />
+	</li>
+</ul>
