@@ -52,3 +52,36 @@
 #menu {
 	margin-top: 15px;
 }
+#mindmap-container {
+	overflow-y: scroll;
+	height:100vh;
+	margin-left: 30px;
+}
+#feedback {
+	float: right;
+	margin-right: 60px;
+	margin-top: -60px;
+}
+#feedback-ques {
+	height:60px;
+	overflow-y:scroll;
+}
+#feedback-header {
+	text-align: center;
+}
+.incorrect {
+	color: red;
+}
+.correct {
+	color: green;
+}
+.star_name, .star_score {
+	width: 400px;
+	text-align: center;
+	font-size: 16px;
+}
+#scores_header {
+	color: purple;
+	width: 800px;
+	text-align:center;
+}

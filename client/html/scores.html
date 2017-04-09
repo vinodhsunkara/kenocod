@@ -1,0 +1,14 @@
+<a id="scoresBack" ui-sref="home">Back to home</a>
+<h1 id="scores_header">Kenocod Stars</h1>
+<div id="scores-container">
+<table>
+  <tr>
+    <th class="star_name">Name</th>
+    <th class="star_name">Score (Correct/Attempted)</th>
+  </tr>
+  <tr ng-repeat="x in scores">
+    <td class="star_name">{{x['user_name']}}</td>
+    <td class="star_score">{{x['earn_score']}}/{{x['part_score']}}</td>
+  </tr>
+</table>
+</div>

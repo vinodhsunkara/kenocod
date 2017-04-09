@@ -1,0 +1,1 @@
+export const UserMemMap = new Mongo.Collection('UserMemMap');

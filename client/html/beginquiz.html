@@ -12,28 +12,28 @@
 	<p id="anschoiceslabel"><label>Answer Choices:</label></p>
 	<ul>
 		<li>
-			<label><input type="checkbox" id="anscboxa" name="anscheckbox" ng-checked = "isChecked('1')" ng-click="selectOnlyThis('1')"> a:</label>
+			<label><input type="checkbox" class="anscheckbox" id="anscboxa" name="a" ng-checked = "isChecked('1')" ng-click="selectOnlyThis('1')"> a:</label>
 			<span ng-hide="{{ansATextNoExists}}">{{ansAText}}</span>
 			<img src="{{ansAImg}}" ng-hide="{{ansAImgNoExists}}"/>
 		</li>
 	</ul>
 	<ul>
 		<li>
-			<label><input type="checkbox" id="anscboxb" name="anscheckbox" ng-checked = "isChecked('2')" ng-click="selectOnlyThis('2')"> b:</label>
+			<label><input type="checkbox" class="anscheckbox" id="anscboxb" name="b" ng-checked = "isChecked('2')" ng-click="selectOnlyThis('2')"> b:</label>
 			<span ng-hide="{{ansATextNoExists}}">{{ansBText}}</span>
 			<img src="{{ansBImg}}" ng-hide="{{ansBImgNoExists}}"/>
 		</li>
 	</ul>
 	<ul>
 		<li>
-			<label><input type="checkbox" id="anscboxc" name="anscheckbox" ng-checked = "isChecked('3')" ng-click="selectOnlyThis('3')"> c:</label>
+			<label><input type="checkbox" class="anscheckbox" id="anscboxc" name="c" ng-checked = "isChecked('3')" ng-click="selectOnlyThis('3')"> c:</label>
 			<span ng-hide="{{ansATextNoExists}}">{{ansCText}}</span>
 			<img src="{{ansCImg}}" ng-hide="{{ansCImgNoExists}}"/>
 		</li>
 	</ul>
 	<ul>
 		<li>
-			<label><input type="checkbox" id="anscboxd" name="anscheckbox" ng-checked = "isChecked('4')" ng-click="selectOnlyThis('4')"> d:</label>
+			<label><input type="checkbox" class="anscheckbox" id="anscboxd" name="d" ng-checked = "isChecked('4')" ng-click="selectOnlyThis('4')"> d:</label>
 			<span ng-hide="{{ansATextNoExists}}">{{ansDText}}</span>
 			<img src="{{ansDImg}}" ng-hide="{{ansDImgNoExists}}"/>
 		</li>
@@ -41,6 +41,19 @@
 </div>
 <div id="quizButtons">
 <input type="button" ng-hide="previousNoExists()" ng-click="getPrevious()" value="Previous" />
-<input type="button" ng-click="submitQuiz()" value="Submit" />
+<input type="button" ng-hide="submitNoExists()" ng-click="submitQuiz()" value="Submit" />
 <input type="button" ng-hide="nextNoExists()" ng-click="getNext()" value="Next" />
+<div id="feedback" ng-hide="feedbackNoExist()">
+	<h4 id="feedback-header">Quiz Feedback</h4>
+	<div id="feedback-ques">
+	<ul ng-repeat="x in feedbacks">
+	<li>
+		<label>Q{{$index + 1}}. Status:</label><span class="{{x['status']}}">{{x['status']}}</span>
+		<label>Submitted Answer:</label><span>{{x['submitted answer']}}</span>
+		<label>Correct Answer:</label><span>{{x['correct answer']}}</span>
+	</li>
+	</ul>
+	</div>
+	<h5>Game Score: {{score}}</h5>
+</div>
 </div>

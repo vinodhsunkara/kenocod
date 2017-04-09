@@ -2,6 +2,11 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 import { Template } from 'meteor/templating';
+import { Accounts } from 'meteor/accounts-base';
+ 
+Accounts.ui.config({
+  passwordSignupFields: 'USERNAME_ONLY',
+});
 
 var myApp = angular.module('kenocod', [
     angularMeteor, uiRouter, 'accounts.ui'
@@ -48,9 +53,31 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
         },
 
     }
+	var scoresState = {
+
+        name: 'scores',
+        url: '/scores',
+        views: {
+            content: {
+                templateUrl: 'client/html/scores.html',
+                controller: 'scoresCtrl'
+            }
+        },
+    }
+	var feedbackState = {
+        name: 'feedback',
+        url: '/feedback',
+        views: {
+            content: {
+                templateUrl: 'client/html/feedback.html',
+                controller: 'feedbackCtrl'
+            }
+        },
+    }
 	$stateProvider.state(homeState);
 	$stateProvider.state(beginQuizState);
 	$stateProvider.state(mindmapsState);
+	$stateProvider.state(scoresState);
     $urlRouterProvider.otherwise('/home');
 
 }
